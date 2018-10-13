@@ -18,3 +18,10 @@ https://doc.rust-lang.org/book/2018-edition/ch02-00-guessing-game-tutorial.html
   and rewrite `Cargo.lock` when successful.
 - `match` given a value, checks each arm's pattern against it and runs the first matching expression.
 - 🌟 Variable names can be shadowed on the same block 🤔.
+
+### ch03
+
+https://doc.rust-lang.org/book/2018-edition/ch03-02-data-types.html
+
+- Integer overflows causes a panic (crash) during development, but NOT during release builds.
+  - Overflows are considered errors, not desired behavior.
