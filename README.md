@@ -1,5 +1,10 @@
 ## notes to self
 
+
+### ch02
+
+https://doc.rust-lang.org/book/2018-edition/ch02-00-guessing-game-tutorial.html
+
 - in `String::new()`, `::` means that the function `new` is implemented on the *type* `String`,
   rather than an instance.
 - `mut` lets it be mutable.
