@@ -4,3 +4,4 @@ version = "0.1.0"
 authors = ["Ha3 <git@ha3.eu>"]
 
 [dependencies]
+rand = "0.3.14"
