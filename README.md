@@ -11,3 +11,5 @@
   - Somehow the compiler knows and warns that we must call `expect` on a `Result`.
 - `cargo update` finds update availabilities on the PATCH in semantic versioning,
   and rewrite `Cargo.lock` when successful.
+- `match` given a value, checks each arm's pattern against it and runs the first matching expression.
+- 🌟 Variable names can be shadowed on the same block 🤔.
