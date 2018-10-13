@@ -25,3 +25,4 @@ https://doc.rust-lang.org/book/2018-edition/ch03-02-data-types.html
 
 - Integer overflows causes a panic (crash) during development, but NOT during release builds.
   - Overflows are considered errors, not desired behavior.
+- 🎵 Arrays have a fixed size.
