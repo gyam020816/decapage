@@ -1,0 +1,6 @@
+[package]
+name = "ch03-variables"
+version = "0.1.0"
+authors = ["Ha3 <git@ha3.eu>"]
+
+[dependencies]
