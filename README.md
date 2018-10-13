@@ -8,3 +8,4 @@
   - When calling the method `expect` of a `Result`, if that `Result` was an `Err`:
     - then it will crash the program purposefully,
     - otherwise it will return some 🤔 value.
+  - Somehow the compiler knows and warns that we must call `expect` on a `Result`.
