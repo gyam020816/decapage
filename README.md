@@ -9,3 +9,5 @@
     - then it will crash the program purposefully,
     - otherwise it will return some 🤔 value.
   - Somehow the compiler knows and warns that we must call `expect` on a `Result`.
+- `cargo update` finds update availabilities on the PATCH in semantic versioning,
+  and rewrite `Cargo.lock` when successful.
