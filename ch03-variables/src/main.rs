@@ -1,5 +1,6 @@
 fn main() {
-    let ch = '\u{FDFA}';
+    let tuple: (char, f32) = ('\u{FDFA}', 1.1);
+    let (cval, _) = tuple;
 
-    println!("The value of ch is: {}", ch);
+    println!("The value of cval is: {}", cval);
 }
