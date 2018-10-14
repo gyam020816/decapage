@@ -1,6 +1,10 @@
 ## notes to self
 
 - use `cargo new myprojectname` to create a subdirectory called `myprojectname`.
+- emoji:
+  - 🌟 *"Huh, interesting feature"*
+  - 🎵 *"Different to some other language"*
+  - 🤔 *"Not sure about my own wording"*
 
 ### ch02
 
@@ -18,7 +22,7 @@ https://doc.rust-lang.org/book/2018-edition/ch02-00-guessing-game-tutorial.html
 - `cargo update` finds update availabilities on the PATCH in semantic versioning,
   and rewrite `Cargo.lock` when successful.
 - `match` given a value, checks each arm's pattern against it and runs the first matching expression.
-- 🌟 Variable names can be shadowed on the same block 🤔.
+- 🌟 Variable names can be shadowed on the same 🤔 block.
 
 ### ch03
 
@@ -26,7 +30,7 @@ https://doc.rust-lang.org/book/2018-edition/ch03-02-data-types.html
 
 - Integer overflows causes a panic (crash) during development, but NOT during release builds.
   - Overflows are considered errors, not desired behavior.
-- 🎵 Arrays have a fixed size.
+- Arrays have a fixed size.
   - Vectors are more flexible.
   - The type of an array is `[type; number]`
   - Invalid array access causes a panic (🎵 not undefined behavior).
@@ -53,3 +57,4 @@ https://doc.rust-lang.org/book/2018-edition/ch03-05-control-flow.html
 - `if` is an expression, so it can be assigned with `let`,
   and all ending expressions in the arms must be of the same type. 
 - `loop` is an expression, and the returned value is at the right of `break`.
+- `for` only has the improved iterable loop style
