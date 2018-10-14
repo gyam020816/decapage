@@ -1,3 +1,10 @@
 fn main() {
-    println!("Hello, world!");
+    let k = 3;
+
+    if k < 5 {
+        println!("condition was true");
+
+    } else {
+        println!("condition was false");
+    }
 }
