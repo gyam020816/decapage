@@ -1,5 +1,6 @@
 ## notes to self
 
+- use `cargo new myprojectname` to create a subdirectory called `myprojectname`.
 
 ### ch02
 
