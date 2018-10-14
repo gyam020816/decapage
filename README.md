@@ -29,3 +29,15 @@ https://doc.rust-lang.org/book/2018-edition/ch03-02-data-types.html
   - Vectors are more flexible.
   - The type of an array is `[type; number]`
   - Invalid array access causes a panic (🎵 not undefined behavior).
+- Statements do not return a value, and end with `;`.
+- Expression return a value, 🎵 and do *not* end with `;`. 
+  - 🎵 A block of code made of `{}` is an expression
+    when the last line within it is an expression (do *not* end with `;`).
+```
+let y = {
+    let x = 3;
+    x + 1
+};
+// y is equal to 4
+```
+- Functions can return early with `return` but 🎵 they return the last expression.
