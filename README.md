@@ -50,4 +50,6 @@ let y = {
 https://doc.rust-lang.org/book/2018-edition/ch03-05-control-flow.html
 
 - The condition in an `if` statement must be of type `bool`.
-- `if` is an expression, so it can be assigned with `let`.
+- `if` is an expression, so it can be assigned with `let`,
+  and all ending expressions in the arms must be of the same type. 
+- `loop` is an expression, and the returned value is at the right of `break`.

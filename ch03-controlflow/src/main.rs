@@ -8,5 +8,16 @@ fn main() {
         //"hey"
         10
     };
-    println!("{}", w)
+    println!("{}", w);
+
+    let mut c = 0;
+    let vee = loop {
+        c += 1;
+
+        if c > 100_000_000 {
+            break "what";
+        }
+    };
+
+    println!("{}", vee)
 }
