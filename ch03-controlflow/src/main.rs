@@ -1,10 +1,12 @@
 fn main() {
-    let k = 3;
+    let x = -1;
 
-    if k < 5 {
-        println!("condition was true");
+    let w = if x == 1 {
+        5
 
     } else {
-        println!("condition was false");
-    }
+        //"hey"
+        10
+    };
+    println!("{}", w)
 }

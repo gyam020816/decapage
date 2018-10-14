@@ -30,6 +30,10 @@ https://doc.rust-lang.org/book/2018-edition/ch03-02-data-types.html
   - Vectors are more flexible.
   - The type of an array is `[type; number]`
   - Invalid array access causes a panic (🎵 not undefined behavior).
+
+
+https://doc.rust-lang.org/book/2018-edition/ch03-03-how-functions-work.html
+
 - Statements do not return a value, and end with `;`.
 - Expression return a value, 🎵 and do *not* end with `;`. 
   - 🎵 A block of code made of `{}` is an expression
@@ -42,3 +46,8 @@ let y = {
 // y is equal to 4
 ```
 - Functions can return early with `return` but 🎵 they return the last expression.
+
+https://doc.rust-lang.org/book/2018-edition/ch03-05-control-flow.html
+
+- The condition in an `if` statement must be of type `bool`.
+- `if` is an expression, so it can be assigned with `let`.
