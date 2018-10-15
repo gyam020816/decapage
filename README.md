@@ -58,3 +58,10 @@ https://doc.rust-lang.org/book/2018-edition/ch03-05-control-flow.html
   and all ending expressions in the arms must be of the same type. 
 - `loop` is an expression, and the returned value is at the right of `break`.
 - `for` only has the improved iterable loop style
+
+## ch04
+
+https://doc.rust-lang.org/book/2018-edition/ch04-01-what-is-ownership.html
+
+- **ownership** is a memory management strategy at compile time
+- ownership features doe not slow down program when running
