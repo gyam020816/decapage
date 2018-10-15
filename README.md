@@ -63,5 +63,67 @@ https://doc.rust-lang.org/book/2018-edition/ch03-05-control-flow.html
 
 https://doc.rust-lang.org/book/2018-edition/ch04-01-what-is-ownership.html
 
-- **ownership** is a memory management strategy at compile time
-- ownership features doe not slow down program when running
+- 🌟 **ownership** is a memory management strategy at compile time
+- 🌟 ownership features doe not slow down program when running
+
+- stack and heap back to basics
+  - stack is fast because the data is always at the top
+  - data on the stack have a known and fixed size
+  - heap is slower because we need to follow a pointer
+  - heap is slower because related data may be scattered all over the place
+  - function arguments and local variables are pushed on the stack,
+    and popped when it is over
+
+- 🌟 ownership rules:
+  - for each value, there is a variable that is the owner of that value
+  - there can only be one owner
+  - when the owner is out of *scope* the value is dropped
+
+- The type `String` is allocated on the heap
+- With `mut` we can mutate strings
+- string literals are fast because they are known at compile time
+
+- 🌟 memory is freed when the owner variable goes out of scope
+- the function that frees memory is called `drop` and Rust calls it as soon as
+  an owning variable goes out of scope
+  - this is similar to *RAII* in C++
+
+- in the following, the data on the heap is not duplicated,
+  and there are NO distinct pointers; this is a move operation:
+```
+let s1 = String::from("hello");
+let s2 = s1;
+```
+- 🌟 given a move operation, the variable it was moved from is no longer valid
+  and cannot be used
+- this is not a shallow copy since the variable it was moved from is no longer valid
+
+- 🌟 deep copies are never done by the language automatically
+- some types are special like integers,
+  they are stored on the stack (may be stored? 🤔) and have a `Copy` trait
+- if a type has a `Copy` trait then they can't have a `Drop` trait
+
+- 🌟 passing a variable to a function is a move, the variable is no longer valid
+
+https://doc.rust-lang.org/book/2018-edition/ch04-02-references-and-borrowing.html
+
+- `&myvariablename` creates a reference that refers to the value of the *myvariablename*
+  but does not own it
+- when a reference goes out of scope, the value is not dropped
+- for functions accepting references, the type must be like `&String`
+- functions accepting mutable references are `&mut String`
+  - 🌟 there can only be one mutable reference to a value in a given scope
+    - this is to prevent a data race in concurrency situations, at compile time
+- the following is valid:
+```
+let mut s = String::from("hello");
+
+{
+    let r1 = &mut s;
+
+} // r1 goes out of scope here, so we can make a new reference with no problems.
+
+let r2 = &mut s;
+```
+- 🌟 we cannot hold a mutable reference at the same time as an immutable reference
+  in a given scope
