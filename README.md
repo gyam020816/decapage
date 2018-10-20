@@ -146,7 +146,7 @@ https://doc.rust-lang.org/book/2018-edition/ch05-01-defining-structs.html
 - a field ends with a comma
 - by convention the name of the struct start with an uppercase
 - instances are created with brackets and look just like the struct
-- fields are accessed with the perios `.` like `my_instance.my_field_name`
+- fields are accessed with the perios `.` like `my_instance.my_field_name`:
 ```
 let user1 = User {
     email: String::from("someone@example.com"),
@@ -158,4 +158,15 @@ let mut user1 = User {
 };
 
 user1.email = String::from("anotheremail@example.com");
+```
+- if the instance is mutable, all the fields are mutable
+- if a variable in the scope has the same name as a struct field,
+  then we can skip explicitly naming the field name:
+```
+fn build_user(email: String) -> User {
+    User {
+        email,
+        sign_in_count: 1,
+    }
+}
 ```
