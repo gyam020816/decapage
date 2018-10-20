@@ -205,3 +205,6 @@ https://doc.rust-lang.org/book/2018-edition/ch06-00-enums.html
 https://doc.rust-lang.org/book/2018-edition/ch06-01-defining-an-enum.html
 
 - turns out `enum`s are almost like Kotlin's `sealed class` with inheriting suclasses
+- if an enum value is a struct, then it uses the same syntax as a struct without the keyword
+
+https://doc.rust-lang.org/book/2018-edition/ch06-02-match.html

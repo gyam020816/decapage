@@ -1,0 +1,6 @@
+[package]
+name = "ch06-match"
+version = "0.1.0"
+authors = ["gyam <git@ha3.eu>"]
+
+[dependencies]
