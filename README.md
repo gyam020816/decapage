@@ -208,3 +208,19 @@ https://doc.rust-lang.org/book/2018-edition/ch06-01-defining-an-enum.html
 - if an enum value is a struct, then it uses the same syntax as a struct without the keyword
 
 https://doc.rust-lang.org/book/2018-edition/ch06-02-match.html
+
+- `match` is like Kotlin's `when`
+- in a `match` it is possible to bind the enum's held data using round brackets
+```
+fn value_in_cents(coin: Coin) -> u32 {
+    match coin {
+        Coin::Penny => 1,
+        Coin::Nickel => 5,
+        Coin::Dime => 10,
+        Coin::Quarter(state) => {
+            println!("State quarter from {:?}!", state);
+            25
+        },
+    }
+}
+```
