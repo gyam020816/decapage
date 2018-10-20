@@ -127,3 +127,35 @@ let r2 = &mut s;
 ```
 - 🌟 we cannot hold a mutable reference at the same time as an immutable reference
   in a given scope
+- *returning a reference to a local variable will be explained in a later chapter*
+
+https://doc.rust-lang.org/book/2018-edition/ch04-03-slices.html
+
+- slice is a reference to part of a string (in `let s = "hello world"`,
+  the slice `&s[0..5]` and `&s[0..=4]` refer to `"hello"`)
+- it's possible to slice the entire string or String with `&s[..]`
+- string in code are just slices of the executable binary itself
+- functions taking or returning `&str` type are preferred/idiomatic than using `String`
+- slicing a non-string `i32` array bears the type `&[i32]`
+
+## ch05
+
+https://doc.rust-lang.org/book/2018-edition/ch05-01-defining-structs.html
+
+- `struct` are data holders that have *fields*
+- a field ends with a comma
+- by convention the name of the struct start with an uppercase
+- instances are created with brackets and look just like the struct
+- fields are accessed with the perios `.` like `my_instance.my_field_name`
+```
+let user1 = User {
+    email: String::from("someone@example.com"),
+    sign_in_count: 1,
+};
+let mut user1 = User {
+    email: String::from("someone@example.com"),
+    sign_in_count: 1,
+};
+
+user1.email = String::from("anotheremail@example.com");
+```
