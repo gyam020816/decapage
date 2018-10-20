@@ -170,3 +170,15 @@ fn build_user(email: String) -> User {
     }
 }
 ```
+- to create a copy of another struct instance,
+  use `..my_other_instance` as the last line of the struct instanciation without a comma
+- tuple structs have no field names, but are typed independently
+```
+struct Color(i32, i32, i32);
+let black = Color(0, 0, 0);
+```
+- in structs, strings have the `String` type because the instance of
+  the struct is the owner of its fields
+  - *structs with reference fields will be explored later*
+
+https://doc.rust-lang.org/book/2018-edition/ch05-02-example-structs.html
