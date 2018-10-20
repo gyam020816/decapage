@@ -131,7 +131,7 @@ let r2 = &mut s;
 
 https://doc.rust-lang.org/book/2018-edition/ch04-03-slices.html
 
-- slice is a reference to part of a string (in `let s = "hello world"`,
+- 🌟 slice is a reference to part of a string (in `let s = "hello world"`,
   the slice `&s[0..5]` and `&s[0..=4]` refer to `"hello"`)
 - it's possible to slice the entire string or String with `&s[..]`
 - string in code are just slices of the executable binary itself
@@ -146,7 +146,7 @@ https://doc.rust-lang.org/book/2018-edition/ch05-01-defining-structs.html
 - a field ends with a comma
 - by convention the name of the struct start with an uppercase
 - instances are created with brackets and look just like the struct
-- fields are accessed with the perios `.` like `my_instance.my_field_name`:
+- fields are accessed with the period `.` like `my_instance.my_field_name`:
 ```
 let user1 = User {
     email: String::from("someone@example.com"),
@@ -159,7 +159,7 @@ let mut user1 = User {
 
 user1.email = String::from("anotheremail@example.com");
 ```
-- if the instance is mutable, all the fields are mutable
+- if the instance is mutable, all the fields are mutable 🤔
 - if a variable in the scope has the same name as a struct field,
   then we can skip explicitly naming the field name:
 ```
@@ -170,7 +170,7 @@ fn build_user(email: String) -> User {
     }
 }
 ```
-- to create a copy of another struct instance,
+- 🌟 to create a copy of another struct instance,
   use `..my_other_instance` as the last line of the struct instanciation without a comma
 - tuple structs have no field names, but are typed independently
 ```
@@ -184,13 +184,13 @@ let black = Color(0, 0, 0);
 https://doc.rust-lang.org/book/2018-edition/ch05-02-example-structs.html
 
 - the values inside a tuple can be accessed with `my_tuple.0` and so on
-- use `#[derive(Debug)]` before the struct definition to print it with the `{:?}` capture
+- 🌟 use `#[derive(Debug)]` before the struct definition to print it with the `{:?}` capture
   - use `{:#?}` for multiline capture
 
 https://doc.rust-lang.org/book/2018-edition/ch05-03-method-syntax.html
 
 - with the `impl` block we can attach methods to a struct, enum, or trait
-  - the first parameter is always `&self`
+  - 🌟 the first parameter is always `&self`
   - it is possible but rare to use `self` to instead to take ownership
 - if a method doesn't take `self` then it's not a method, it's an *associated function*
   - think static method / companion object function
@@ -204,13 +204,14 @@ https://doc.rust-lang.org/book/2018-edition/ch06-00-enums.html
 
 https://doc.rust-lang.org/book/2018-edition/ch06-01-defining-an-enum.html
 
-- turns out `enum`s are almost like Kotlin's `sealed class` with inheriting suclasses
+- 🌟 turns out `enum`s are almost like Kotlin's `sealed class` with inheriting suclasses
+- we create instances of enums 🤔
 - if an enum value is a struct, then it uses the same syntax as a struct without the keyword
 
 https://doc.rust-lang.org/book/2018-edition/ch06-02-match.html
 
 - `match` is like Kotlin's `when`
-- in a `match` it is possible to bind the enum's held data using round brackets
+- 🌟 in a `match` it is possible to bind the enum's held data using round brackets
 ```
 fn value_in_cents(coin: Coin) -> u32 {
     match coin {
@@ -224,3 +225,7 @@ fn value_in_cents(coin: Coin) -> u32 {
     }
 }
 ```
+- a `match` must cover all branches
+- in a `match` use `_` to match all, more or less equivalent to else
+- it is possible to use `_` to match  all of an enum's held data i.e. `Coin::Quarter(_) => ...`
+- if a `match`'s arms match all possible states then a `_` is not needed
