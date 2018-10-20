@@ -184,3 +184,4 @@ let black = Color(0, 0, 0);
 https://doc.rust-lang.org/book/2018-edition/ch05-02-example-structs.html
 
 - the values inside a tuple can be accessed with `my_tuple.0` and so on
+- use `#[derive(Debug)]` before the struct definition to print it with the `{:?}` capture

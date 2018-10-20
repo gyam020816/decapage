@@ -1,3 +1,4 @@
+#[derive(Debug)]
 struct Surface {
     width: u32,
     height: u32,
@@ -9,6 +10,7 @@ fn main() {
         height: 50,
     };
 
+    println!("rect is {:?}", &rect);
     println!(
         "The area is {} sq units",
         area(&rect)
