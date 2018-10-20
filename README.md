@@ -182,3 +182,5 @@ let black = Color(0, 0, 0);
   - *structs with reference fields will be explored later*
 
 https://doc.rust-lang.org/book/2018-edition/ch05-02-example-structs.html
+
+- the values inside a tuple can be accessed with `my_tuple.0` and so on
