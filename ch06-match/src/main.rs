@@ -1,28 +1,30 @@
-enum UsState {
-    Alabama,
-    Alaska,
-    Mass,
+#[derive(Debug)]
+enum Something {
+    Blah,
+    Derp(u32),
 }
 
-enum Coin {
-    Penny,
-    Nickel,
-    Dime,
-    Quarter(UsState),
-}
-
-impl Coin {
-    fn value_in_cents(&self) -> u32 {
+impl Something {
+    fn sq(&self) -> Something {
         match self {
-            Coin::Penny => 1,
-            Coin::Nickel => 5,
-            Coin::Dime => 10,
-            Coin::Quarter(UsState::Alabama) => 77,
-            Coin::Quarter(_) => 25,
+            Something::Blah => Something::Blah,
+            Something::Derp(4) => Something::Blah,
+            Something::Derp(1) => Something::Derp(1),
+            Something::Derp(a) => Something::Derp(a / 2),
         }
     }
 }
 
 fn main() {
-    println!("{}", Coin::Quarter(UsState::Alabama).value_in_cents());
+    let mut x = Something::Derp(256);
+    for value in 0..100 {
+        println!("{:?}", x);
+        x = x.sq();
+        match x {
+            Something::Blah => break,
+            Something::Derp(1) => break,
+            _ => ()
+        }
+    }
+    println!("{:?}", x);
 }
