@@ -200,3 +200,8 @@ https://doc.rust-lang.org/book/2018-edition/ch05-03-method-syntax.html
 
 https://doc.rust-lang.org/book/2018-edition/ch06-00-enums.html
 
+- enums are closer to algebraic data types, see F# or Haskell
+
+https://doc.rust-lang.org/book/2018-edition/ch06-01-defining-an-enum.html
+
+- turns out `enum`s are almost like Kotlin's `sealed class` with inheriting suclasses
