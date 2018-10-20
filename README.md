@@ -185,3 +185,18 @@ https://doc.rust-lang.org/book/2018-edition/ch05-02-example-structs.html
 
 - the values inside a tuple can be accessed with `my_tuple.0` and so on
 - use `#[derive(Debug)]` before the struct definition to print it with the `{:?}` capture
+  - use `{:#?}` for multiline capture
+
+https://doc.rust-lang.org/book/2018-edition/ch05-03-method-syntax.html
+
+- with the `impl` block we can attach methods to a struct, enum, or trait
+  - the first parameter is always `&self`
+  - it is possible but rare to use `self` to instead to take ownership
+- if a method doesn't take `self` then it's not a method, it's an *associated function*
+  - think static method / companion object function
+- it's possible to have multiple impl blocks
+
+## ch06
+
+https://doc.rust-lang.org/book/2018-edition/ch06-00-enums.html
+

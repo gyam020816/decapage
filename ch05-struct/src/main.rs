@@ -4,19 +4,21 @@ struct Surface {
     height: u32,
 }
 
+impl Surface {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+}
+
 fn main() {
     let rect = Surface {
         width: 30,
         height: 50,
     };
 
-    println!("rect is {:?}", &rect);
+    println!("rect is {:#?}", &rect);
     println!(
         "The area is {} sq units",
-        area(&rect)
+        &rect.area()
     );
-}
-
-fn area(surface: &Surface) -> u32 {
-    surface.width * surface.height
 }
